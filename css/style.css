@@ -1,0 +1,183 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Press Start 2P', cursive;
+    /*Aplicando a fonte em todo o documento*/
+}
+
+#div_game_board {
+    width: 100%;
+    height: 500px;
+    border-bottom: 15px solid rgb(35, 160, 35);
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87CEEB, #E0F6FF);
+}
+
+.screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+    color: white;
+    text-align: center;
+}
+
+.screen h1 {
+    font-size: 32px;
+    margin-bottom: 30px;
+    color: #f7d117;
+    text-shadow: 4px 4px 0px #000;
+}
+
+.screen h4 {
+    font-size: 11px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.btn-start {
+    padding: 15px 25px;
+    font-size: 14px;
+    background-color: #e62425;
+    color: white;
+    border: 4px solid #fff;
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+
+.btn-start:hover {
+    transform: scale(1.05);
+    background-color: #f7d117;
+    color: black;
+    border-color: black;
+}
+
+#ipt_demo1 {
+    padding: 12px;
+    font-size: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+    background-color: #FFF;
+    color: #000;
+    outline: none;
+    border-color: black;
+    width: 180px;
+}
+
+#game-over-screen h1 {
+    color: #fff;
+}
+
+#win-screen h1 {
+    color: #4CAF50;
+}
+
+#game-over-screen,
+#win-screen {
+    display: none;
+}
+
+.img_pipe {
+    position: absolute;
+    /*Cada imagem não interfere na outra*/
+    bottom: 0;
+    width: 80px;
+    right: -80px;
+}
+
+.pipe-animation {
+    animation: pipe-animation 1.5s infinite linear;
+    /*Se colocar só dois segundo ele para de rodar com o infinite ele roda sem parar*/
+}
+
+.img_mario {
+    width: 150px;
+    position: absolute;
+    /*Uma imagem não interfere na outra*/
+    bottom: 0;
+    /*A imagem fica no chão*/
+}
+
+.jump {
+    animation: jump-animation 500ms ease-out;
+}
+
+.img_clouds {
+    position: absolute;
+    width: 550px;
+    top: 70px;
+    right: -550px;
+    animation: clouds-animation 15s infinite linear;
+}
+
+#resultados {
+    margin-top: 20px;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: relative;
+    z-index: 5;
+}
+
+#resultados div {
+    font-size: 14px;
+    min-height: 20px;
+}
+
+@keyframes pipe-animation {
+
+    /*Animação do pipe*/
+    from {
+        right: -80px;
+    }
+
+    to {
+        right: 100%;
+    }
+}
+
+@keyframes jump-animation {
+    0% {
+        bottom: 0;
+    }
+
+    40% {
+        bottom: 180px;
+    }
+
+    50% {
+        bottom: 180px;
+    }
+
+    60% {
+        bottom: 180px;
+    }
+
+    100% {
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation {
+    from {
+        right: -550px;
+    }
+
+    to {
+        right: 100%;
+    }
+}

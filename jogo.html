@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPTecher's Machine</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+
+</head>
+<body>
+
+    <div id="div_game_board"> 
+
+        <div id="resultados">
+            <div id="resultado_binario"></div> 
+            <div id="resultado_octal"></div> 
+            <div id="resultado_hexadecimal"></div> 
+        </div>
+
+        <div id="start-screen" class="screen">
+            <h1>SPTECHER'S MACHINE</h1>
+            <h4>Digite um número decimal:</h4>
+            <input id="ipt_demo1" type="text" placeholder="Ex: 42">
+            <button class="btn-start" onclick="startGame()">COMEÇAR JOGO</button>
+        </div>
+
+        <div id="win-screen" class="screen">
+            <h1>SUCESSO!</h1>
+            <div id="mensagem" style="margin-bottom: 25px; font-size: 10px;"></div>
+            <button class="btn-start" onclick="restartGame()">REINICIAR</button>
+        </div>
+
+        <div id="game-over-screen" class="screen">
+            <h1>GAME OVER</h1>
+            <button class="btn-start" onclick="restartGame()">REINICIAR</button>
+        </div>
+
+        <img src="./Imagens/clouds.png" class="img_clouds">
+        <img src="./Imagens/mario.gif" class="img_mario">
+        <img src="./Imagens/pipe.png" class="img_pipe">
+
+        <script src="./js/script.js"></script>
+
+    </div>
+</body>
+</html>
